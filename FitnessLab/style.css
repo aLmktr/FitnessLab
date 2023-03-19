@@ -8,4 +8,16 @@
 body {
     background: linear-gradient(to right, #2c3e50, #3498db);
   }
+
+
+.nav-link {
+    border-radius: 25px;
+}
+
+.nav-link:hover {
+    border-radius: 25px;
+    border:  rgba(255, 255, 255, 0.637);
+    background-color: rgba(255, 255, 255, 0.637);
+    color: black;
+}
   
