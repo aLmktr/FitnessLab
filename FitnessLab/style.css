@@ -12,6 +12,8 @@ body {
 
 .nav-link {
     border-radius: 25px;
+    margin: 0.4em;
+    transition: transform 0.2s ease-out;
 }
 
 .nav-link:hover {
@@ -19,5 +21,6 @@ body {
     border:  rgba(255, 255, 255, 0.637);
     background-color: rgba(255, 255, 255, 0.637);
     color: black;
+    transform:  scale(1.1);
 }
   
