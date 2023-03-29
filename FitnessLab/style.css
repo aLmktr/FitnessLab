@@ -1,29 +1,27 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
 body {
-    background: linear-gradient(to right, #2c3e50, #3498db);
-  }
-
+  background: linear-gradient(to right, #2c3e50, #3498db);
+}
 
 .nav-link {
-    border-radius: 25px;
-    margin: 0.4em;
-    transition: transform 0.2s ease-out;
+  border-radius: 25px;
+  margin: 0.4em;
+  transition: transform 0.2s ease-out;
 }
 
 .nav-link:hover {
-    border-radius: 25px;
-    border:  rgba(255, 255, 255, 0.637);
-    background-color: rgba(255, 255, 255, 0.637);
-    color: black;
-    transform:  scale(1.1);
+  border-radius: 25px;
+  border: rgba(255, 255, 255, 0.637);
+  background-color: rgba(255, 255, 255, 0.637);
+  color: black;
+  transform: scale(1.1);
 }
 
 p {
-    color: white;
+  color: white;
 }

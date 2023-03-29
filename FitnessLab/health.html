@@ -1,80 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-    <link rel="icon" type="image/x-icon" href="/src/FitnessLab-icon.png">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="icon" type="image/x-icon" href="/src/FitnessLab-icon.png" />
+    <link rel="stylesheet" href="style.css" />
     <title>Health & nutrition</title>
-</head>
-<body>
-     <!--NavBar-->
-     <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">
-            <img src="/src/FitnessLab-logo-noBg-white.png" alt="logo" height="60" width="70">
+  </head>
+  <body>
+    <!--NavBar-->
+    <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="/src/FitnessLab-logo-noBg-white.png"
+            alt="logo"
+            height="60"
+            width="70"
+          />
         </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav ms-auto">
-              <a class="nav-link" href="index.html">Home</a>
-              <a class="nav-link" href="training.html">Training Plans</a>
-              <a class="nav-link" href="health.html" style="border-radius: 25px;
-              border:  rgba(255, 255, 255, 0.637);
-              background-color: rgba(255, 255, 255, 0.637);
-              color: black;">Health</a>
-              <a class="nav-link" href="contact.html">Contact</a>
-              <a class="nav-link" href="about.html">About us</a>
-            </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ms-auto">
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="training.html">Training Plans</a>
+            <a
+              class="nav-link"
+              href="health.html"
+              style="
+                border-radius: 25px;
+                border: rgba(255, 255, 255, 0.637);
+                background-color: rgba(255, 255, 255, 0.637);
+                color: black;
+              "
+              >Health</a
+            >
+            <a class="nav-link" href="contact.html">Contact</a>
+            <a class="nav-link" href="about.html">About us</a>
           </div>
-        </div>
-      </nav>
-
-
-
-      <!--body-->
-
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            <form action="https://httpbin.org/get" method="get">
-                <div class="row p-2">
-                  <div class="col">
-                    <input class="form-control" type="number" name="weight" placeholder="Weight(kg)">
-                  </div>
-                  <div class="col">
-                    <input class="form-control" type="number" name="height" placeholder="Height(Cm)">
-                  </div>
-                </div>
-                <div class="row p-2">
-                  <div class="col">
-                    <input class="form-control" type="number" name="Age" placeholder="Age">
-                  </div>
-                  <div class="col">
-                    <select class="form-select" name="activeity" id="activeity">
-                        <option value="1.3">1-2 times</option>
-                        <option value="1.4">3-4 times</option>
-                        <option value="1.6">4-6 times</option>
-                        <option value="1.8">More</option>
-                    </select>
-                  </div>
-                </div>
-            </form>
-          </div>
-
-          <!--Below Form-->
-           
         </div>
       </div>
+    </nav>
 
+    <!--body-->
 
+    <div class="container">
+      <div class="row m-4">
+        <div class="col-6">
+          <div class="calorieCalculator">
+            <p class="display-6">Calorie Calculator</p>
+            <form action="https://httpbin.org/get" method="get">
+              <div class="mb-3">
+                <input
+                  class="form-control"
+                  type="number"
+                  name="weight"
+                  placeholder="Weight(kg)"
+                />
+              </div>
 
+              <div class="mb-3">
+                <input
+                  class="form-control"
+                  type="number"
+                  name="height"
+                  placeholder="Height(Cm)"
+                />
+              </div>
 
+              <div class="mb-3">
+                <input
+                  class="form-control"
+                  type="number"
+                  name="Age"
+                  placeholder="Age"
+                />
+              </div>
 
-</body>
+              <div class="mb-3">
+                <select class="form-select" name="activeity" id="activeity">
+                  <option value="1.3">1-2 times</option>
+                  <option value="1.4">3-4 times</option>
+                  <option value="1.6">4-6 times</option>
+                  <option value="1.8">More</option>
+                </select>
+              </div>
+
+              <div class="form-check text-light">
+                <label for="male">Male</label>
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="gender"
+                  value="male"
+                />
+              </div>
+              <div class="form-check text-light">
+                <label for="female">Femal</label>
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="gender"
+                  value="female"
+                />
+              </div>
+              <br />
+              <button class="btn btn-light" type="submit">Calculate</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="col-6">
+          <p class="display-6">Calories calculator results shout be here</p>
+        </div>
+
+        <!--Below Form-->
+      </div>
+    </div>
+  </body>
 </html>
