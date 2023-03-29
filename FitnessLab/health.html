@@ -68,10 +68,11 @@
     <!--body-->
 
     <div class="container">
+      <p class="display-6 text-center">Calorie Calculator</p>
       <div class="row m-4">
+        <!--Calculator-->
         <div class="col-6">
           <div class="calorieCalculator">
-            <p class="display-6">Calorie Calculator</p>
             <form action="https://httpbin.org/get" method="get">
               <div class="mb-3">
                 <input
@@ -102,10 +103,11 @@
 
               <div class="mb-3">
                 <select class="form-select" name="activeity" id="activeity">
-                  <option value="1.3">1-2 times</option>
-                  <option value="1.4">3-4 times</option>
-                  <option value="1.6">4-6 times</option>
-                  <option value="1.8">More</option>
+                  <option selected hidden>Activity Level</option>
+                  <option value="0.5">sedentary</option>
+                  <option value="1.2">lightly active</option>
+                  <option value="1.5">moderately active</option>
+                  <option value="1.8">very active</option>
                 </select>
               </div>
 
@@ -132,12 +134,48 @@
             </form>
           </div>
         </div>
-
+        <!--Result-->
         <div class="col-6">
-          <p class="display-6">Calories calculator results shout be here</p>
+          <div class="card">
+            <div class="card-header">
+              <em><h3>2157 Calories</h3></em>
+            </div>
+            <div class="card-body">
+              <div class="progress mb-2">
+                <div
+                  class="progress-bar progress-bar-striped progress-bar-animated bg-success"
+                  role="progressbar"
+                  style="width: 50%"
+                >
+                  50% Carb
+                </div>
+
+                <div
+                  class="progress-bar progress-bar-striped progress-bar-animated bg-info"
+                  role="progressbar"
+                  style="width: 35%"
+                >
+                  35% Protein
+                </div>
+
+                <div
+                  class="progress-bar progress-bar-striped progress-bar-animated bg-danger"
+                  role="progressbar"
+                  style="width: 15%"
+                >
+                  15% Fats
+                </div>
+              </div>
+              <div class="card-text mt-4">
+                this is your daily caloire intake for maintaing your current
+                weight if you would like to lose weight you can enter looseing
+                weight programme form our training page
+              </div>
+            </div>
+          </div>
         </div>
 
-        <!--Below Form-->
+        <!--Below Calculator-->
       </div>
     </div>
   </body>

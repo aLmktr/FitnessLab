@@ -18,6 +18,11 @@
     ></script>
     <link rel="icon" type="image/x-icon" href="/src/FitnessLab-icon.png" />
     <link rel="stylesheet" href="style.css" />
+    <style>
+      input {
+        background-color: black;
+      }
+    </style>
     <title>Contact us</title>
   </head>
   <body>
@@ -66,5 +71,28 @@
     </nav>
 
     <!--body-->
+    <div class="container">
+      <p class="display-6 text-center">Contact us</p>
+      <div class="row">
+        <div class="col-lg-8 mx-auto text-center">
+          <form>
+            <div class="form-outline mb-3">
+              <input class="form-control" type="text" placeholder="Name" />
+            </div>
+            <div class="form-outline mb-3">
+              <input class="form-control" type="email" placeholder="Email" />
+            </div>
+            <div class="from-outline mb3">
+              <textarea
+                class="form-control"
+                placeholder="Tell Us"
+                rows="4"
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-light w-100 mt-3">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
