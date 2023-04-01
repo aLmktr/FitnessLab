@@ -18,6 +18,46 @@
     ></script>
     <link rel="icon" type="image/x-icon" href="/src/FitnessLab-icon.png" />
     <link rel="stylesheet" href="style.css" />
+    <style>
+      .small-nav {
+        background-color: aliceblue;
+        border-radius: 2em;
+      }
+      ul {
+        text-align: center;
+        list-style: none;
+      }
+      li {
+        transition: transform 0.2s ease-out;
+        display: inline-block;
+        margin: 0 2em 0 2em;
+        padding: 0.2em;
+      }
+      li:hover {
+        transform: scale(1.2, 1.2);
+      }
+      @media (max-width: 768px) {
+        .small-nav li {
+          font-size: 0.8em;
+        }
+      }
+      @media (max-width: 517px) {
+        .small-nav li {
+          font-size: 0.69em;
+        }
+      }
+      @media (max-width: 470px) {
+        .small-nav li {
+          font-size: 0.62em;
+        }
+      }
+      @media (max-width: 410px) {
+        .small-nav li {
+          display: block;
+          margin: 10px 0;
+        }
+      }
+    </style>
     <title>Contact us</title>
   </head>
   <body>
@@ -67,11 +107,22 @@
 
     <!--body-->
     <div class="container">
-      <div class="row m-2">
-        <div class="col">
-          <p class="display-6">
-            Choose Your Fitness Journey: Customized Training Plans for All Goals
-          </p>
+      <div class="row mt-3">
+        <div class="col text-center">
+          <p class="display-6">Choose Your Fitness Journey</p>
+        </div>
+      </div>
+      <!--nav-->
+      <div class="row mt-3">
+        <div class="col mx-auto">
+          <div class="small-nav">
+            <ul>
+              <li>Strength</li>
+              <li>Cardio</li>
+              <li>Weight Loss</li>
+              <li>Bodyweight</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
