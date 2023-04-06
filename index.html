@@ -32,6 +32,10 @@
       p > span {
         color: black;
       }
+      #Title {
+        font-family: "Playfair Display", "serif";
+        font-size: clamp(1.9em, 4vw, 3.5em);
+      }
     </style>
     <title>FitnessLab</title>
   </head>
@@ -83,28 +87,27 @@
     <!--Body-->
     <div class="container">
       <div class="row">
-        <div class="col mt-5">
-          <p style="font-family: 'Playfair Display', serif; font-size: 3em">
-            Transform Your Body,Transform Your Life.
+        <div class="col-sm-6 mt-5">
+          <p id="Title">
+            Transform Your Body, Transform Your Life.
             <span>FitnessLab</span> Your Ultimate Fitness Destination
           </p>
         </div>
-        <div class="col">
-          <img src="src/homeImg.png" alt="deadlift" />
+        <div class="col-sm-6">
+          <img src="src/homeImg.png" alt="deadlift" class="img-fluid" />
         </div>
       </div>
 
-      <div class="row m-5 text-light">
-        <div class="col">
+      <div class="row mt-5 text-light">
+        <div class="col-md-6">
           <img
             src="https://shortest.link/j-Ms"
             alt="training"
-            height="400"
             class="img-fluid"
           />
         </div>
-        <div class="col-6">
-          <p class="display-6 md-5">
+        <div class="col-md-6">
+          <p class="display-5 mb-4">
             Comprehensive Training Plans for All Fitness Levels
           </p>
           <p>
@@ -123,13 +126,13 @@
         </div>
       </div>
 
-      <div class="row m-5 text-light">
-        <div class="col">
-          <p class="display-6">
+      <div class="row mt-5 text-light">
+        <div class="col-md-6">
+          <p class="display-5 mb-4">
             Fuel Your Body: Our Nutrition and Health Services
           </p>
           <p>
-            we understand that nutrition is just as important as exercise when
+            We understand that nutrition is just as important as exercise when
             it comes to achieving your health and fitness goals. That's why we
             offer personalized nutrition plans designed to help you meet your
             specific needs and preferences. Our team of experts includes
@@ -140,8 +143,8 @@
             and health products to support your journey to better health.
           </p>
         </div>
-        <div class="col">
-          <img class="img-fluid" src="src/food-home.jpg" alt="eat" />
+        <div class="col-md-6">
+          <img src="src/food-home.jpg" alt="eat" class="img-fluid" />
         </div>
       </div>
     </div>
