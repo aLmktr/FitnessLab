@@ -22,6 +22,7 @@
       href="/src/fitnesslab-favicon-dark.png"
     />
     <link rel="stylesheet" href="style.css" />
+    <script src="/scripts/calorieCalculator.js"></script>
     <style>
       p.h3 {
         color: white;
@@ -85,12 +86,13 @@
         <!--Calculator-->
         <div class="col-md-6">
           <div class="calorieCalculator">
-            <form action="https://httpbin.org/get" method="get">
+            <form id="claorieCalculator">
               <div class="mb-3">
                 <input
                   class="form-control"
                   type="number"
                   name="weight"
+                  id="weight"
                   placeholder="Weight(kg)"
                 />
               </div>
@@ -142,7 +144,11 @@
                 />
               </div>
               <br />
-              <button class="btn btn-light mb-5" type="submit">
+              <button
+                class="btn btn-light mb-5"
+                type="submit"
+                onclick="calculate()"
+              >
                 Calculate
               </button>
             </form>
