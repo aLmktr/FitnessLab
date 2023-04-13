@@ -86,13 +86,16 @@
         <!--Calculator-->
         <div class="col-md-6">
           <div class="calorieCalculator">
-            <form id="claorieCalculator">
+            <form
+              id="claorieCalculator"
+              name="claorieCalculator"
+              onsubmit="return calculate()"
+            >
               <div class="mb-3">
                 <input
                   class="form-control"
-                  type="number"
+                  type="text"
                   name="weight"
-                  id="weight"
                   placeholder="Weight(kg)"
                 />
               </div>
@@ -100,7 +103,7 @@
               <div class="mb-3">
                 <input
                   class="form-control"
-                  type="number"
+                  type="text"
                   name="height"
                   placeholder="Height(Cm)"
                 />
@@ -109,7 +112,7 @@
               <div class="mb-3">
                 <input
                   class="form-control"
-                  type="number"
+                  type="text"
                   name="Age"
                   placeholder="Age"
                 />
@@ -118,10 +121,10 @@
               <div class="mb-3">
                 <select class="form-select" name="activeity" id="activeity">
                   <option selected hidden>Activity Level*</option>
-                  <option value="0.5">sedentary</option>
-                  <option value="1.2">lightly active</option>
-                  <option value="1.5">moderately active</option>
-                  <option value="1.8">very active</option>
+                  <option value="1.2">sedentary</option>
+                  <option value="1.375">lightly active</option>
+                  <option value="1.475">moderately active</option>
+                  <option value="1.725">very active</option>
                 </select>
               </div>
 
@@ -144,11 +147,7 @@
                 />
               </div>
               <br />
-              <button
-                class="btn btn-light mb-5"
-                type="submit"
-                onclick="calculate()"
-              >
+              <button class="btn btn-light mb-5" type="submit">
                 Calculate
               </button>
             </form>
@@ -158,7 +157,7 @@
         <div class="col-md-6">
           <div class="card">
             <div class="card-header">
-              <em><h3>2157 Calories</h3></em>
+              <div id="calorieResult"></div>
             </div>
             <div class="card-body">
               <div class="progress mb-2">
