@@ -1,4 +1,5 @@
 function calculate() {
+  // select the form inputs
   let form = document.forms["claorieCalculator"];
   let weight = form.weight.value;
   let height = form.height.value;
@@ -8,9 +9,12 @@ function calculate() {
   let result = document.getElementById("calorieResult");
   result.innerHTML = "";
 
+  // calculate colorie intake
   let calorieNeed = calorieEquation(weight, height, age, gender, activity);
 
-  result.innerHTML += `<p class="h3 text-dark">${calorieNeed} Calorie<p>`;
+  // display result
+  countingTO(calorieNeed, result);
+
   return false;
 }
 
@@ -24,7 +28,21 @@ function calorieEquation(weight, height, age, gender, activity) {
     BMR -= 161;
   }
 
-  // calculate the final total daliy need with activity factor
+  // calculate the total daliy need with activity factor
   TDEE = Math.round(BMR * activity);
   return TDEE;
+}
+
+// show number in couting effect
+function countingTO(target, element) {
+  let counter = target - 20;
+  let interval = 40;
+  let timer = setInterval(function () {
+    counter++;
+    element.textContent = counter;
+    if (counter === target) {
+      element.textContent += " Calories";
+      clearInterval(timer);
+    }
+  }, interval);
 }
