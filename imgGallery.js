@@ -8,15 +8,15 @@ gallery.style.cssText = `display: flex; text-align: center; flex-wrap: wrap; jus
 
 let sources = {
   img1: [
-    "/src/cardio.png",
+    "src/cardio.png",
     "We offer customized cardio plans tailored to your fitness goals and level of fitness",
   ],
   img2: [
-    "/src/supplements.jpg",
+    "src/supplements.jpg",
     "We offer expert advice on supplements for optimal health and wellness.",
   ],
   img3: [
-    "/src/calorie.png",
+    "src/calorie.png",
     "We offer a calorie calculator service to help you track your daily intake",
   ],
 };
