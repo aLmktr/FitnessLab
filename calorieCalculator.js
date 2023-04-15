@@ -1,16 +1,25 @@
 function calculate() {
   // select the form inputs
   let form = document.forms["claorieCalculator"];
-  let weight = form.weight.value;
-  let height = form.height.value;
-  let age = form.Age.value;
-  let activity = form.activeity.value;
-  let gender = form.gender.value;
-  let result = document.getElementById("calorieResult");
+  let weight = form.weight;
+  let height = form.height;
+  let age = form.Age;
+  let activity = form.activity;
+  let gender = form.gender;
+  let result = document.querySelector("#calorieResult");
   result.innerHTML = "";
 
+  // validate inputs
+  //validateInputs(form, weight, height, age, activity, gender);
+
   // calculate colorie intake
-  let calorieNeed = calorieEquation(weight, height, age, gender, activity);
+  let calorieNeed = calorieEquation(
+    weight.value,
+    height.value,
+    age.value,
+    gender.value,
+    activity.value
+  );
 
   // display result
   countingTO(calorieNeed, result);

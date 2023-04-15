@@ -97,6 +97,7 @@
                   name="weight"
                   placeholder="Weight(kg)"
                 />
+                <span id="form-error-msg-weight"></span>
               </div>
 
               <div class="mb-3">
@@ -106,6 +107,7 @@
                   name="height"
                   placeholder="Height(Cm)"
                 />
+                <span id="form-error-msg-height"></span>
               </div>
 
               <div class="mb-3">
@@ -115,16 +117,18 @@
                   name="Age"
                   placeholder="Age"
                 />
+                <span id="form-error-msg-age"></span>
               </div>
 
               <div class="mb-3">
-                <select class="form-select" name="activeity" id="activeity">
+                <select class="form-select" name="activity" id="activeity">
                   <option selected hidden>Activity Level*</option>
                   <option value="1.2">sedentary</option>
                   <option value="1.375">lightly active</option>
                   <option value="1.475">moderately active</option>
                   <option value="1.725">very active</option>
                 </select>
+                <span id="form-error-msg-activity"></span>
               </div>
 
               <div class="form-check text-light">
@@ -145,6 +149,7 @@
                   value="female"
                 />
               </div>
+              <span id="form-error-msg-gender"></span>
               <br />
               <button class="btn btn-light mb-5" type="submit">
                 Calculate
@@ -185,11 +190,10 @@
                 </div>
               </div>
               <div class="card-text mt-4">
-                Your daily calorie intake should be around 2157 calories based
-                on your inputs. This is the amount of calories you need to
-                maintain your current weight. Adjust your calorie intake to
-                achieve your health and fitness goals, and remember to make
-                healthy food choices and exercise regularly.
+                This is the amount of calories you need to maintain your current
+                weight. Adjust your calorie intake to achieve your health and
+                fitness goals, and remember to make healthy food choices and
+                exercise regularly.
               </div>
             </div>
           </div>
