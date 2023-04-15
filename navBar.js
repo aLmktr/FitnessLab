@@ -37,6 +37,7 @@ let navbar = ` <!--NavBar-->
         <a class="nav-link" href="health.html">Health</a>
         <a class="nav-link" href="contact.html">Contact</a>
         <a class="nav-link" href="about.html">About us</a>
+        <a class="nav-link" href="questionnaire.html">Questionnaire</a>
       </div>
     </div>
   </div>
