@@ -97,8 +97,8 @@
                   type="text"
                   name="weight"
                   placeholder="Weight(kg)"
+                  required
                 />
-                <span id="form-error-msg-weight"></span>
               </div>
 
               <div class="mb-3">
@@ -107,8 +107,8 @@
                   type="text"
                   name="height"
                   placeholder="Height(Cm)"
+                  required
                 />
-                <span id="form-error-msg-height"></span>
               </div>
 
               <div class="mb-3">
@@ -117,19 +117,23 @@
                   type="text"
                   name="Age"
                   placeholder="Age"
+                  required
                 />
-                <span id="form-error-msg-age"></span>
               </div>
 
               <div class="mb-3">
-                <select class="form-select" name="activity" id="activeity">
-                  <option selected hidden>Activity Level*</option>
+                <select
+                  class="form-select"
+                  name="activity"
+                  id="activeity"
+                  required
+                >
+                  <option value="" selected hidden>Activity Level*</option>
                   <option value="1.2">sedentary</option>
                   <option value="1.375">lightly active</option>
                   <option value="1.475">moderately active</option>
                   <option value="1.725">very active</option>
                 </select>
-                <span id="form-error-msg-activity"></span>
               </div>
 
               <div class="form-check text-light">
@@ -139,6 +143,7 @@
                   type="radio"
                   name="gender"
                   value="male"
+                  required
                 />
               </div>
               <div class="form-check text-light">
@@ -148,9 +153,10 @@
                   type="radio"
                   name="gender"
                   value="female"
+                  required
                 />
               </div>
-              <span id="form-error-msg-gender"></span>
+
               <br />
               <button class="btn btn-light mb-5" type="submit">
                 Calculate
