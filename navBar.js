@@ -38,8 +38,6 @@ let navbar = ` <!--NavBar-->
         <a class="nav-link" href="contact.html">Contact</a>
         <a class="nav-link" href="about.html">About us</a>
         <a class="nav-link" href="questionnaire.html">Questionnaire</a>
-        <a class="nav-link" href="funnpage.html">Funn Game</a>
-        
       </div>
     </div>
   </div>
