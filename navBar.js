@@ -1,3 +1,9 @@
+// get current page
+let currentPage = window.location.pathname.split("/")[1];
+// get the current page a tag
+//let currentLink = document.querySelector(`a[href="${currentPage}"]`);
+// console.log(currentLink);
+
 let navbar = ` <!--NavBar-->
 <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
   <div class="container-fluid">
@@ -22,17 +28,7 @@ let navbar = ` <!--NavBar-->
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav ms-auto">
-        <a
-          class="nav-link"
-          href="index.html"
-          style="
-            border-radius: 25px;
-            border: rgba(255, 255, 255, 0.637);
-            background-color: rgba(255, 255, 255, 0.637);
-            color: black;
-          "
-          >Home</a
-        >
+        <a class="nav-link" href="index.html">Home</a>
         <a class="nav-link" href="training.html">Training Plans</a>
         <a class="nav-link" href="health.html">Health</a>
         <a class="nav-link" href="contact.html">Contact</a>
@@ -43,5 +39,6 @@ let navbar = ` <!--NavBar-->
   </div>
 </nav>`;
 
+// add the navbar to the page
 let htmlNav = document.querySelector("#nav-bar");
 htmlNav.innerHTML += navbar;
