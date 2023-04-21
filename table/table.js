@@ -1,5 +1,5 @@
 // function that creates table for training plans
-function createTableTraining(targetElement) {
+function trainingTable(targetElement) {
   // create the basic table elements
   let table = document.createElement("table");
   let thead = document.createElement("thead");
@@ -11,6 +11,9 @@ function createTableTraining(targetElement) {
 
   // select the target element to append tha table to
   let target = document.getElementById(targetElement);
+
+  // set the angular controller for the table
+  table.setAttribute("ng-controller", "tableController");
 
   // give the content to th
   th.setAttribute("ng-repeat", "header in headers");
@@ -32,7 +35,7 @@ function createTableTraining(targetElement) {
 }
 
 // function to create tables for information cards
-function createTableForInfoCard(targetElement) {
+function infoCardTable(targetElement) {
   // create the basic table elements
   let table = document.createElement("table");
   let thead = document.createElement("thead");
@@ -44,6 +47,9 @@ function createTableForInfoCard(targetElement) {
 
   // select the target element to append tha table to
   let target = document.getElementById(targetElement);
+
+  // set the angular controller for the table
+  table.setAttribute("ng-controller", "tableController");
 
   // give the content to th
   th.setAttribute("ng-repeat", "header in headers");
@@ -63,3 +69,6 @@ function createTableForInfoCard(targetElement) {
   tr.appendChild(td1);
   tr.appendChild(td2);
 }
+
+// export the table objects
+export { trainingTable, infoCardTable };
