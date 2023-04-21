@@ -1,14 +1,65 @@
-// initalize angular app
-let app = angular.module("table-app", []);
-// create controller for table
-app.controller("customTable", function ($scope) {
-  // create table headers
-  $scope.headers = ["Exercise", "Sets", "Reps"];
-  // create table rows
-  $scope.rows = [
-    { exerice: "Bench Press", sets: "3", reps: "10" },
-    { exerice: "Bench Press", sets: "3", reps: "10" },
-    { exerice: "Bench Press", sets: "3", reps: "10" },
-    { exerice: "Bench Press", sets: "3", reps: "10" },
-  ];
-});
+// function that creates table for training plans
+function createTableTraining(targetElement) {
+  // create the basic table elements
+  let table = document.createElement("table");
+  let thead = document.createElement("thead");
+  let tbody = document.createElement("tbody");
+  let tr = document.createElement("tr");
+  let td1 = document.createElement("td");
+  let td2 = document.createElement("td");
+  let th = document.createElement("th");
+
+  // select the target element to append tha table to
+  let target = document.getElementById(targetElement);
+
+  // give the content to th
+  th.setAttribute("ng-repeat", "header in headers");
+  th.innerHTML = "{{header}}";
+
+  // give the contenet to tr and td
+  tr.setAttribute("ng-repeat", "row in rows");
+  td1.innerHTML = "{{row.exercise}}";
+  td2.innerHTML = "{{row.setsAndReps}}";
+
+  // append the table elements to the table
+  target.appendChild(table);
+  table.appendChild(thead);
+  table.appendChild(tbody);
+  thead.appendChild(th);
+  tbody.appendChild(tr);
+  tr.appendChild(td1);
+  tr.appendChild(td2);
+}
+
+// function to create tables for information cards
+function createTableForInfoCard(targetElement) {
+  // create the basic table elements
+  let table = document.createElement("table");
+  let thead = document.createElement("thead");
+  let tbody = document.createElement("tbody");
+  let tr = document.createElement("tr");
+  let td1 = document.createElement("td");
+  let td2 = document.createElement("td");
+  let th = document.createElement("th");
+
+  // select the target element to append tha table to
+  let target = document.getElementById(targetElement);
+
+  // give the content to th
+  th.setAttribute("ng-repeat", "header in headers");
+  th.innerHTML = "{{header}}";
+
+  // give the contenet to tr and td
+  tr.setAttribute("ng-repeat", "row in rows");
+  td1.innerHTML = "{{row.level}}";
+  td2.innerHTML = "{{row.description}}";
+
+  // append the table elements to the table
+  target.appendChild(table);
+  table.appendChild(thead);
+  table.appendChild(tbody);
+  thead.appendChild(th);
+  tbody.appendChild(tr);
+  tr.appendChild(td1);
+  tr.appendChild(td2);
+}
