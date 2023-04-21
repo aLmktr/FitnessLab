@@ -13,13 +13,13 @@ function infoCard(acitvity, description) {
 
 // array to hold training plan data
 let legDayExercies = [
-  { exercise: "Squats", sets: 3, reps: 12 },
-  { exercise: "Deadlifts", sets: 3, reps: 10 },
-  { exercise: "Lunges", sets: 3, reps: "max" },
-  { exercise: "Leg Press", sets: 3, reps: 15 },
-  { exercise: "Calf Raises", sets: 4, reps: 12 },
-  { exercise: "Leg Extension", sets: 3, reps: 15 },
-  { exercise: "Glute-Ham Raises", sets: 3, reps: 10 },
+  { exercise: "Squats", setsAndReps: "3 x 12" },
+  { exercise: "Deadlifts", setsAndReps: "3 x 10" },
+  { exercise: "Lunges", setsAndReps: "3 x max" },
+  { exercise: "Leg Press", setsAndReps: "3 x 15" },
+  { exercise: "Calf Raises", setsAndReps: "4 x 12" },
+  { exercise: "Leg Extension", setsAndReps: "3 x 15, 12, 10" },
+  { exercise: "Glute-Ham Raises", setsAndReps: "3 x 10" },
 ];
 
 // array to hold information card data
