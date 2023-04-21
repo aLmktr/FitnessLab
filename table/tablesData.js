@@ -51,3 +51,6 @@ let legDay = new trainingData("strength", "Leg Day", legDayExercies);
 
 // initialize information card with infoCard object
 let activty = new infoCard("activity", activityDescription);
+
+// export the training plan and information card data
+export { legDay, activty };
