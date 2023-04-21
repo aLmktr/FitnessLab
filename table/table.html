@@ -21,26 +21,12 @@
       src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"
     ></script>
     <script defer src="table.js"></script>
+    <link rel="stylesheet" href="/style.css" />
     <title>Table</title>
   </head>
-  <body>
+  <body ng-app="table-app">
     <div class="row mt-5">
-      <div class="col-md-6">
-        <div ng-app="table-app" ng-controller="customTable">
-          <table class="table table-responsive table-striped table-borderless">
-            <thead>
-              <th ng-repeat="th in headers">{{ th }}</th>
-            </thead>
-            <tbody>
-              <tr ng-repeat="row in rows">
-                <td>{{ row.exerice }}</td>
-                <td>{{ row.sets }}</td>
-                <td>{{ row.reps }}</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
+      <div class="col-md-6 mx-auto" id="tableContainer"></div>
     </div>
   </body>
 </html>
