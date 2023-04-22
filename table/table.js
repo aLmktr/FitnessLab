@@ -15,6 +15,14 @@ function trainingTable(targetElement) {
   // set the angular controller for the table
   table.setAttribute("ng-controller", "tableController");
 
+  // give the styel for the table
+  table.classList.add(
+    "table",
+    "table-striped",
+    "table-responsive",
+    "table-borderless"
+  );
+
   // give the content to th
   th.setAttribute("ng-repeat", "header in headers");
   th.innerHTML = "{{header}}";
@@ -50,6 +58,14 @@ function infoCardTable(targetElement) {
 
   // set the angular controller for the table
   table.setAttribute("ng-controller", "tableController");
+
+  // give the styel for the table
+  table.classList.add(
+    "table",
+    "table-striped",
+    "table-responsive",
+    "table-borderless"
+  );
 
   // give the content to th
   th.setAttribute("ng-repeat", "header in headers");
