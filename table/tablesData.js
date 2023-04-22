@@ -13,6 +13,10 @@ function trainingData(category, name, exercises) {
 function infoCard(acitvity, description) {
   this.acitvity = acitvity;
   this.description = description;
+
+  this.getData() = function() {
+    return this.description;
+  }
 }
 
 // array to hold training plan data
