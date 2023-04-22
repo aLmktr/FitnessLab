@@ -15,5 +15,3 @@ app.controller("tableController", function ($scope) {
   $scope.headers = ["Exercise", "Sets and Reps"];
   $scope.rows = legDay.getData();
 });
-
-// add style to the table after it is created

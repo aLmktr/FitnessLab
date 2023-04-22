@@ -16,12 +16,7 @@ function trainingTable(targetElement) {
   table.setAttribute("ng-controller", "tableController");
 
   // give the styel for the table
-  table.classList.add(
-    "table",
-    "table-striped",
-    "table-responsive",
-    "table-borderless"
-  );
+  table.className = "table table-responsive table-striped table-borderless";
 
   // give the content to th
   th.setAttribute("ng-repeat", "header in headers");
@@ -60,12 +55,7 @@ function infoCardTable(targetElement) {
   table.setAttribute("ng-controller", "tableController");
 
   // give the styel for the table
-  table.classList.add(
-    "table",
-    "table-striped",
-    "table-responsive",
-    "table-borderless"
-  );
+  table.className = "table table-responsive table-striped table-borderless";
 
   // give the content to th
   th.setAttribute("ng-repeat", "header in headers");
