@@ -7,11 +7,10 @@ import { trainingTable, infoCardTable } from "./table.js";
 let app = angular.module("table-app", []);
 
 // add the table to the html
-trainingTable("tableContainer");
+infoCardTable("activityTable");
 
 // add the data to the table
 app.controller("tableController", function ($scope) {
-  // set the header for the table
-  $scope.headers = ["Exercise", "Sets and Reps"];
-  $scope.rows = legDay.getData();
+  $scope.headers = ["Activity Level", "Description"];
+  $scope.rows = activty.getData();
 });
