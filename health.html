@@ -21,7 +21,10 @@
       type="image/x-icon"
       href="/src/fitnesslab-favicon-dark.png"
     />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <link rel="stylesheet" href="style.css" />
+    <script defer src="displayTables.js" type="module"></script>
     <style>
       p.h3 {
         color: white;
@@ -208,54 +211,9 @@
       </div>
       <!--Below Calculator-->
       <!--Q1-->
-      <div class="row my-5">
+      <div class="row my-5" ng-app="table-app">
         <p class="h3 mb-4">What does activity level mean?</p>
-        <div class="col-md-6 col-lg-auto">
-          <table class="table table-borderless table-responsive table-striped">
-            <thead>
-              <tr>
-                <th>Activity level</th>
-                <th>description</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th>Sedentary</th>
-                <td>
-                  This activity level describes a lifestyle with little to no
-                  physical activity or exercise beyond what is necessary for
-                  daily living, such as walking around the house or office.
-                </td>
-              </tr>
-              <tr>
-                <th>Lightly Active</th>
-                <td>
-                  This activity level describes a lifestyle that involves some
-                  physical activity or exercise, such as daily walks or light
-                  workouts, but mostly sedentary activities like desk work or
-                  light housework.
-                </td>
-              </tr>
-              <tr>
-                <th>Moderately Active</th>
-                <td>
-                  This activity level describes a lifestyle that includes
-                  regular physical activity or exercise, such as daily workouts
-                  or active hobbies, along with some sedentary activities like
-                  desk work.
-                </td>
-              </tr>
-              <tr>
-                <th>Very Active</th>
-                <td>
-                  This activity level describes a lifestyle with high levels of
-                  physical activity or exercise, such as intense workouts or
-                  physically demanding jobs, with minimal sedentary activities.
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+        <div class="col-md-6 col-lg-auto" id="activityTable"></div>
       </div>
       <!--Q2-->
       <div class="row">
