@@ -16,6 +16,8 @@
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script defer src="displayTrainingTable.js" type="module"></script>
     <link rel="icon" href="src/fitnesslab-favicon-dark.png" />
     <link rel="stylesheet" href="style.css" />
     <style>
@@ -152,48 +154,7 @@
         <p class="display-6 mb-4">Strength 🏋️‍♂️</p>
         <!--Legs-->
         <div class="row">
-          <div class="col-md-6">
-            <table
-              class="table table-responsive table-striped table-borderless"
-            >
-              <thead>
-                <tr>
-                  <th>Exercise</th>
-                  <th>Sets x Reps</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Squats</td>
-                  <td>3 x 12</td>
-                </tr>
-                <tr>
-                  <td>Deadlifts</td>
-                  <td>3 x 10</td>
-                </tr>
-                <tr>
-                  <td>Lunges</td>
-                  <td>3 x max</td>
-                </tr>
-                <tr>
-                  <td>Leg Press</td>
-                  <td>3 x 15</td>
-                </tr>
-                <tr>
-                  <td>Calf Raises</td>
-                  <td>4 x 12</td>
-                </tr>
-                <tr>
-                  <td>Leg Extension</td>
-                  <td>3 x 20, 15, 10</td>
-                </tr>
-                <tr>
-                  <td>Glute-Ham Raises</td>
-                  <td>3 x 10</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+          <div class="col-md-6" ng-app="table-app" id="legDayTable"></div>
           <div class="col-md-6">
             <p class="h3">Day 1 / Legs</p>
             <p class="mt-4" style="font-family: inherit">
