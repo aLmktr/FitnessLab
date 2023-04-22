@@ -4,9 +4,9 @@ function trainingData(category, name, exercises) {
   this.name = name;
   this.exercises = exercises;
 
-  this.getData = function () {
+  function getData() {
     return this.exercises;
-  };
+  }
 }
 
 // object construction to maintain information card data
@@ -14,7 +14,7 @@ function infoCard(acitvity, description) {
   this.acitvity = acitvity;
   this.description = description;
 
-  this.getData() = function() {
+  function getData() {
     return this.description;
   }
 }
