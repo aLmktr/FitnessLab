@@ -1,16 +1,16 @@
 // import tbale data
-import { activty } from "./tablesData.js";
+import { legDay } from "./tablesData.js";
 // import table objects
-import { infoCardTable } from "./table.js";
+import { trainingTable } from "./table.js";
 
 // define angular module/app
 let app = angular.module("table-app", []);
 
 // add the table to the html
-infoCardTable("activityTable");
+trainingTable("legDayTable");
 
 // add the data to the table
 app.controller("tableController", function ($scope) {
-  $scope.headers = ["Activity Level", "Description"];
-  $scope.rows = activty.getData();
+  $scope.headers = ["Exercise", "Sets and Reps"];
+  $scope.rows = legDay.getData();
 });
