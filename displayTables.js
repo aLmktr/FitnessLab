@@ -1,7 +1,5 @@
-// import tbale data
-import { activty } from "./tablesData.js";
-// import table objects
-import { infoCardTable } from "./table.js";
+// import the table and data
+import { infoCardTable, activty } from "./table.js";
 
 // define angular module/app
 let app = angular.module("table-app", []);

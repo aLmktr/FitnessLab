@@ -1,7 +1,5 @@
-// import tbale data
-import { legDay } from "./tablesData.js";
-// import table objects
-import { trainingTable } from "./table.js";
+// import the table and data
+import { trainingTable, legDay } from "./table.js";
 
 // define angular module/app
 let app = angular.module("table-app", []);
