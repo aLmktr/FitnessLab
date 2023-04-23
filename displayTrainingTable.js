@@ -11,4 +11,14 @@ trainingTable("legDayTable");
 app.controller("tableController", function ($scope) {
   $scope.headers = ["Exercise", "Sets and Reps"];
   $scope.rows = legDay.getData();
+
+  // add new element
+  $scope.addToLegDay = function () {
+    $scope.rows.push({
+      exercise: $scope.exerciseName,
+      setsAndReps: $scope.setsAndReps,
+    });
+    $scope.exercise = "";
+    $scope.setsAndReps = "";
+  };
 });
