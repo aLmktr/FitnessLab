@@ -14,11 +14,12 @@ app.controller("tableController", function ($scope) {
 
   // add new element
   $scope.addToLegDay = function () {
+    console.log("addToLegDay is indeed working");
     $scope.rows.push({
       exercise: $scope.exerciseName,
       setsAndReps: $scope.setsAndReps,
     });
-    $scope.exercise = "";
+    $scope.exerciseName = "";
     $scope.setsAndReps = "";
   };
 });
