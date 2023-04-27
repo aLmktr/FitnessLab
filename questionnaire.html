@@ -192,51 +192,28 @@
 
         <input type="submit" value="Submit" />
       </form>
-      <script>
-        function validateForm() {
-          let isValid = true;
+	<script>
+		const emailRegex = /^\S+@\S+\.\S+$/;
 
-          const nameInput = document.getElementById("name");
-          const nameError = document.getElementById("name-error");
-          if (nameInput.value === "") {
-            nameError.innerHTML = "Please enter your name";
-            isValid = false;
-          } else {
-            nameError.innerHTML = "";
-          }
+		function validateForm() {
+			const nameInput = document.getElementById("name");
+			const emailInput = document.getElementById("email");
 
-          const emailInput = document.getElementById("email");
-          const emailError = document.getElementById("email-error");
-          const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-          if (emailInput.value === "") {
-            emailError.innerHTML = "Please enter your email";
-            isValid = false;
-          } else if (!emailPattern.test(emailInput.value)) {
-            emailError.innerHTML = "Please enter a valid email address";
-            isValid = false;
-          } else {
-            emailError.innerHTML = "";
-          }
+			if (nameInput.value.trim() === "") {
+				alert("Name is required.");
+				nameInput.focus();
+				return false;
+			}
 
-          const ratingInputs = document.getElementsByName("rating");
-          const ratingError = document.getElementById("rating-error");
-          let isChecked = false;
-          for (let i = 0; i < ratingInputs.length; i++) {
-            if (ratingInputs[i].checked) {
-              isChecked = true;
-              break;
-            }
-          }
-          if (!isChecked) {
-            ratingError.innerHTML = "Please select a rating";
-            isValid = false;
-          } else {
-            ratingError.innerHTML = "";
-          }
+			if (!emailRegex.test(emailInput.value)) {
+				alert("Invalid email address.");
+				emailInput.focus();
+				return false;
+			}
 
-          return isValid;
-        }
-      </script>
+			return true;
+		}
+	</script>
       <div class="footer nav-fixed-bottom">
         <footer class="text-center text-light">
           <!-- Copyright -->
