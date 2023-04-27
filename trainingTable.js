@@ -14,6 +14,7 @@ function trainingTable(targetElement) {
 
   // set the angular controller for the table
   table.setAttribute("ng-controller", "tableController");
+  table.id = "trainingtable";
 
   // give the styel for the table
   table.className = "table table-responsive table-striped table-borderless";
@@ -69,18 +70,31 @@ let app = angular.module("table-app", []);
 trainingTable("legDayTable");
 
 // add the data to the table
-app.controller("tableController", function ($scope) {
-  $scope.headers = ["Exercise", "Sets and Reps"];
-  $scope.rows = legDay.getData();
+function displayTable() {
+  app.controller("tableController", function ($scope) {
+    $scope.headers = ["Exercise", "Sets and Reps"];
+    $scope.rows = legDay.getData();
+  });
+}
 
-  // add new element
-  $scope.addToLegDay = function () {
-    console.log("addToLegDay is indeed working");
-    $scope.rows.push({
-      exercise: $scope.exerciseName,
-      setsAndReps: $scope.setsAndReps,
-    });
-    $scope.exerciseName = "";
-    $scope.setsAndReps = "";
-  };
+displayTable();
+
+// insert a new row to the table
+let insertForm = document.getElementById("insert-row");
+insertForm.addEventListener("submit", (event) => {
+  // prevent the default action of the form
+  event.preventDefault();
+
+  // get the new row data
+  let exercise = document.getElementById("exercise").value;
+  let setsAndReps = document.getElementById("sets").value;
+
+  // add the new row to the table
+  legDay.exercises.push({ exercise: exercise, setsAndReps: setsAndReps });
+
+  // re-render the table
+  displayTable();
+
+  //reset the form
+  insertForm.reset();
 });
