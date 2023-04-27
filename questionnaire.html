@@ -193,26 +193,64 @@
         <input type="submit" value="Submit" />
       </form>
 	<script>
-		const emailRegex = /^\S+@\S+\.\S+$/;
+const form = document.querySelector('form');
+const nameInput = document.getElementById('name');
+const emailInput = document.getElementById('email');
+const ratingInputs = document.querySelectorAll('input[name="rating"]');
+const feedbackInput = document.getElementById('feedback');
+const improvementsInputs = document.querySelectorAll('input[name="improvements"]');
+const newsletterInput = document.getElementById('newsletter');
 
-		function validateForm() {
-			const nameInput = document.getElementById("name");
-			const emailInput = document.getElementById("email");
+// Define validation patterns
+const namePattern = /^[a-zA-Z\s]+$/;
+const emailPattern = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
 
-			if (nameInput.value.trim() === "") {
-				alert("Name is required.");
-				nameInput.focus();
-				return false;
-			}
+// Define custom validation messages
+const nameError = 'Please enter a valid name.';
+const emailError = 'Please enter a valid email address.';
+const ratingError = 'Please select an overall satisfaction rating.';
+const improvementsError = 'Please select at least one improvement option.';
 
-			if (!emailRegex.test(emailInput.value)) {
-				alert("Invalid email address.");
-				emailInput.focus();
-				return false;
-			}
+// Validate form on submit
+form.addEventListener('submit', (event) => {
+  // Validate name
+  if (!nameInput.value.match(namePattern)) {
+    event.preventDefault(); // prevent form submission
+    nameInput.reportValidity(); // show default validation message
+    alert(nameError); // show custom validation message
+  }
 
-			return true;
-		}
+  // Validate email
+  if (!emailInput.value.match(emailPattern)) {
+    event.preventDefault(); // prevent form submission
+    emailInput.reportValidity(); // show default validation message
+    alert(emailError); // show custom validation message
+  }
+
+  // Validate rating
+  let ratingChecked = false;
+  ratingInputs.forEach((input) => {
+    if (input.checked) {
+      ratingChecked = true;
+    }
+  });
+  if (!ratingChecked) {
+    event.preventDefault(); // prevent form submission
+    alert(ratingError); // show custom validation message
+  }
+
+  // Validate improvements
+  let improvementsChecked = false;
+  improvementsInputs.forEach((input) => {
+    if (input.checked) {
+      improvementsChecked = true;
+    }
+  });
+  if (!improvementsChecked) {
+    event.preventDefault(); // prevent form submission
+    alert(improvementsError); // show custom validation message
+  }
+});
 	</script>
       <div class="footer nav-fixed-bottom">
         <footer class="text-center text-light">
