@@ -98,3 +98,21 @@ insertForm.addEventListener("submit", (event) => {
   //reset the form
   insertForm.reset();
 });
+
+// search function
+let searchQuery = document.getElementById("search");
+searchQuery.addEventListener("input", (key) => {
+  // get the search query
+  let query = searchQuery.value.toLowerCase();
+  let tableBody = document.querySelector("tbody");
+
+  // loop through the table rows
+  tableBody.querySelectorAll("tr").forEach((row) => {
+    let rowData = row.textContent.toLowerCase();
+    if (rowData.includes(query) && query !== "") {
+      row.classList.add("bg-light");
+    } else {
+      row.classList.remove("bg-light");
+    }
+  });
+});
