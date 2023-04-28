@@ -16,6 +16,8 @@
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-animate.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -28,6 +30,7 @@
       href="src/fitnesslab-favicon-dark.png"
     />
     <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/gallery.css" />
     <script defer src="scripts/indexScorlling.js"></script>
     <script defer src="scripts/imgGallery.js"></script>
     <style>
@@ -41,7 +44,7 @@
     </style>
     <title>FitnessLab</title>
   </head>
-  <body>
+  <body ng-app="galleryApp">
     <!--NavBar-->
     <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
       <div class="container-fluid">
@@ -151,8 +154,22 @@
         </div>
       </div>
 
+      <!--Gallery-->
       <div class="row mt-5">
-        <div class="col-4 mx-auto" id="gallery"></div>
+        <div class="col-lg-7 mx-auto">
+          <div ng-app="galleryApp">
+            <div ng-controller="GalleryCtrl">
+              <div class="gallery">
+                <div
+                  ng-repeat="image in images"
+                  class="gallery-image"
+                  ng-style="{ 'background-image': 'url(' + image.src + ')' }"
+                  ng-class="{ 'active': isActive(image) }"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="row mt-5">
