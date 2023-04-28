@@ -1,10 +1,13 @@
+// selecte html elements
 const cards = document.querySelectorAll(".memory-card"); //select all the cards
+let winningMsg = document.getElementById("winningMsg"); //select the winning msg
 
 // creting the variables
 let first_Card;
 let second_Card;
 let has_Flipped_Card = false;
 let can_click = true;
+let matches = 0;
 
 function flip_Card() {
   //flip card work with some conditions
@@ -45,6 +48,11 @@ function Match_check() {
     second_Card.removeEventListener("click", flip_Card);
 
     reset_Board();
+    matches++;
+    // check if user won
+    if (matches === cards.length / 2) {
+      displayWinningMsg();
+    }
   } else {
     // the delay
     can_click = false;
@@ -65,3 +73,21 @@ cards.forEach((card) => {
 
 // adding the flip event
 cards.forEach((card) => card.addEventListener("click", flip_Card));
+
+// display winning msg
+function displayWinningMsg() {
+  // create a button
+  let button = document.createElement("button");
+  button.className = "btn btn-outline-primary mt-3";
+  button.innerText = "Play Again";
+  button.addEventListener("click", () => {
+    // reload the page
+    location.reload();
+  });
+
+  // style the winning msg with bootstrap
+  winningMsg.className = "alert alert-dark text-center mt-3";
+  winningMsg.innerHTML =
+    "<p class='display-5' style='color: black;'>You Won 🎉</p>";
+  winningMsg.appendChild(button);
+}
