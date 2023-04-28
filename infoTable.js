@@ -14,6 +14,7 @@ function infoCardTable(targetElement) {
 
   // set the angular controller for the table
   table.setAttribute("ng-controller", "tableController");
+  table.id = "activityTable";
 
   // give the styel for the table
   table.className = "table table-responsive table-striped table-borderless";
@@ -81,7 +82,28 @@ let app = angular.module("table-app", []);
 infoCardTable("activityTable");
 
 // add the data to the table
-app.controller("tableController", function ($scope) {
-  $scope.headers = ["Activity Level", "Description"];
-  $scope.rows = activty.getData();
+function displayTable() {
+  app.controller("tableController", function ($scope) {
+    $scope.headers = ["Activity Level", "Description"];
+    $scope.rows = activty.getData();
+  });
+}
+displayTable();
+
+// insert a row to the table
+let insertForm = document.getElementById("insertRow");
+insertRow.addEventListener("submit", (event) => {
+  // get the new values
+  let newLevel = document.getElementById("activity").value;
+  let newDescription = document.getElementById("description").value;
+  let newRow = { level: newLevel, description: newDescription };
+
+  // add the new row
+  activityDescription.push(newRow);
+
+  // display the new table
+  displayTable();
+
+  // reset the form
+  insertForm.reset();
 });
