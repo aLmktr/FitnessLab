@@ -89,37 +89,3 @@ function displayTable() {
   });
 }
 displayTable();
-
-// insert a row to the table
-let insertForm = document.getElementById("insertRow");
-insertRow.addEventListener("submit", (event) => {
-  // get the new values
-  let newLevel = document.getElementById("activity").value;
-  let newDescription = document.getElementById("description").value;
-  let newRow = { level: newLevel, description: newDescription };
-
-  // add the new row
-  activityDescription.push(newRow);
-
-  // display the new table
-  displayTable();
-
-  // reset the form
-  insertForm.reset();
-});
-
-// search table
-let searchQuery = document.getElementById("search");
-searchQuery.addEventListener("input", (key) => {
-  let query = searchQuery.value.toLowerCase();
-  let tableBody = document.querySelector("tbody");
-
-  tableBody.querySelectorAll("tr").forEach((row) => {
-    let rowData = row.textContent.toLowerCase();
-    if (rowData.includes(query) && query != "") {
-      row.classList.add("bg-light");
-    } else {
-      row.classList.remove("bg-light");
-    }
-  });
-});
