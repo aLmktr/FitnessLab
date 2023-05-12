@@ -224,6 +224,7 @@
           </p>
           <form
             action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>"
+            class = "mb-5" 
             method="POST"
           >
             <div class="row">
@@ -245,7 +246,7 @@
             </div>
             <div class="row mt-4">
               <div class="col">
-                <?php include 'php/food.php' ?>
+                <?php include 'php/foodData.php' ?>
               </div>
             </div>
           </form>
