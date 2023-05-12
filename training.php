@@ -159,7 +159,7 @@
         <!--Legs-->
         <div class="row">
           <div class="col-md-6">
-            <?php include 'php\trainingTable.php'; ?>
+            <?php include 'php/trainingTable.php'; ?>
           </div>
           <div class="col-md-6">
             <p class="h3">Day 1 / Legs</p>

@@ -219,27 +219,38 @@
       <!--Q2-->
       <div class="row">
         <div class="col-md-6 col-lg-auto">
-          <p class="h3 mb-3">Why do we even care about calories ?</p>
-          <p>
-            Calories are the measure of energy that our body needs to perform
-            daily functions such as breathing, digesting food, and moving.
-            Knowing our daily calorie intake is crucial in maintaining a healthy
-            lifestyle and achieving our fitness goals. Consuming more calories
-            than we need will result in weight gain, while consuming fewer
-            calories than we need will result in weight loss. Understanding our
-            daily calorie needs can help us make informed decisions about what
-            and how much to eat, and can assist us in creating a personalized
-            and effective nutrition and fitness plan.
+          <p class="h3 mb-3">
+            FoodyDB - Discover the appropriate food that matches your required calorie intake!
           </p>
+          <form
+            action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>"
+            method="POST"
+          >
+            <div class="row">
+              <div class="col">
+                <input
+                  type="text"
+                  class="form-control"
+                  name="calorie"
+                  placeholder="Calories less than ..."
+                />
+              </div>
+              <div class="col">
+                <input
+                  type="submit"
+                  class="btn btn-outline-light"
+                  value="Search"
+                />
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col">
+                <?php include 'php/food.php' ?>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
-    </div>
-    <!--footer-->
-    <div class="footer nav-fixed-bottom">
-      <footer class="text-center text-light">
-        <!-- Copyright -->
-        <div class="text-center p-5">© 2023 Copyright: FitnessLab</div>
-      </footer>
     </div>
   </body>
 </html>
