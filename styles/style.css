@@ -41,23 +41,3 @@ table {
   background-color: rgba(255, 255, 255, 0.699);
   border-radius: 2em;
 }
-
-#text-banner {
-  border-radius: 0.2em;
-  background-color: #282e3381;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-#text-banner p {
-  animation: ScrolLeft 15s linear infinite;
-}
-
-@keyframes ScrolLeft {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
