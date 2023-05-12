@@ -244,12 +244,12 @@
                 />
               </div>
             </div>
-            <div class="row mt-4">
+            </div>
+          </form>
+          <div class="row mt-2">
               <div class="col">
                 <?php include 'php/foodData.php' ?>
               </div>
-            </div>
-          </form>
         </div>
       </div>
     </div>

@@ -147,8 +147,8 @@
             <ul>
               <a href="#Strength"><li>Strength</li></a>
               <a href="#Cardio"><li>Cardio</li></a>
-              <a href="#Weight_Loss"><li>Weight Loss</li></a>
-              <a href="#Bodyweight"><li>Bodyweight</li></a>
+              <a href="#Body_weight"><li>Body Weight</li></a>
+              <a href="#ExercisesDB"><li>Search Exercises</li></a>
             </ul>
           </div>
         </div>
@@ -470,28 +470,7 @@
           </p>
         </div>
       </div>
-      <div class="row mt-5" id="Weight_Loss">
-        <p class="display-6 mb-4">Weight Loss 🔥</p>
-        <p>
-          Actually, there isn't really a category of exercises specifically
-          designed for "weight loss". Rather, the best approach is to combine
-          strength training exercises with cardio workouts in order to achieve
-          your desired weight loss goals. By adopting this approach, you can
-          ensure that you are effectively burning calories, building muscle, and
-          improving your overall fitness level. So, it's just a matter of
-          finding the right combination of exercises that work best for you and
-          your body.
-        </p>
-        <p>
-          You don't know your calorie intake ?? don't worry - we've got you
-          covered.
-          <a href="health.php" style="color: rgb(8, 18, 78)"
-            >FitnessLab calorie calculator</a
-          >
-          allows you to easily calculate your daily calorie intake for free
-        </p>
-      </div>
-      <div class="row mt-5" id="Bodyweight">
+      <div class="row mt-5" id="Body_weight">
         <p class="display-6 mb-4">Bodyweight 💪</p>
         <div class="col-md-6 mt-4">
           <table class="table table-responsive table-borderless table-striped">
@@ -570,6 +549,32 @@
             before starting any new exercise program to ensure that it's safe
             and effective for you.
           </p>
+        </div>
+      </div>
+      <div class="row mt-5" id="ExercisesDB">
+        <p class="display-6">Search for Exercise</p>
+        <div class="row mt-4">
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
+          <div class="col">
+                <select name="category" class="form-select">
+                  <option value="legs">Legs</option>
+                  <option value="chest">Chest</option>
+                  <option value="back">Back</option>
+                  <option value="shoulders">Shoulders</option>
+                  <option value="triceps">Triceps</option>
+                  <option value="biceps">Biceps</option>
+                </select>
+          </div>
+          <div class="col">
+          <input type="submit" value="Search" class="btn btn-outline-light">
+          </div>
+       </form>
+        </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <?php include 'php/trainingData.php'?>
+          </div>
         </div>
       </div>
     </div>
