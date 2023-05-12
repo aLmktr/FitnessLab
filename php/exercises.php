@@ -29,9 +29,9 @@
    <?php 
    // do the following if there's a post request
    if($_SERVER["REQUEST_METHOD"] == "POST"){
-    // connect to databse
     $category = $_POST["category"]; 
     echo "<h2>Reslut for $category Exercises</h2>";
+    // connect to databse
     $server = "localhost"; $username = "root"; $password = ""; $dbname="fitnesslab";
     $conn = mysqli_connect($server, $username, $password, $dbname);
     if(!$conn){
