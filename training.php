@@ -84,6 +84,7 @@
         }
       }
     </style>
+    <script src="scripts\removeTable.js"></script>
     <title>Training Plans</title>
   </head>
   <body ng-app="table-app">
@@ -157,66 +158,9 @@
         <p class="display-6 mb-4">Strength 🏋️‍♂️</p>
         <!--Legs-->
         <div class="row">
-        <div class="col-md-6">
-              <?php 
-
-              // class to maintain information about one row 
-              class Exercise {
-                private $exercise;
-                private $setsReps;
-
-                // constructor
-                public function __construct($exercise, $setsReps){
-                  $this->exercise = $exercise;
-                  $this->setsReps = $setsReps;
-                }
-
-                // get sets and reps
-                public function getSetsReps(){
-                  return $this->setsReps;
-                }
-
-                // get exercise
-                public function getExercise(){
-                  return $this->exercise;
-                }
-              }
-
-              // array of objects to maintain info about exercises
-              $legDayExercies = [
-                new Exercise("Squats", "3 x 12"),
-                new Exercise("Deadlifts", "3 x 10"),
-                new Exercise("Lunges", "3 x max"),
-                new Exercise("Leg Press", "3 x 15"),
-                new Exercise("Calf Raises", "4 x 12"),
-                new Exercise("Leg Extension", "3 x 15, 12, 10"),
-                new Exercise("Glute-Ham Raises", "3 x 10")
-              ];
-
-              // display the exercises in a table
-              function displayExercises($data){
-                echo "<table class='table table-responsive table-striped table-borderless'>";
-                echo "<thead>";
-                echo "<tr>";
-                echo "<th>Exercise</th>";
-                echo "<th>Sets & Reps</th>";
-                echo "</tr>";
-                echo "</thead>";
-                echo "<tbody>";
-                foreach($data as $exercise){
-                  echo "<tr>";
-                  echo "<td>" . $exercise->getExercise() . "</td>";
-                  echo "<td>" . $exercise->getSetsReps() . "</td>";
-                  echo "</tr>";
-                }
-                echo "</tbody>";
-                echo "</table>";
-              }
-
-              $display = displayExercises($legDayExercies);
-              ?>
-              
-            </div>
+          <div class="col-md-6">
+            <?php include 'php\trainingTable.php'; ?>
+          </div>
           <div class="col-md-6">
             <p class="h3">Day 1 / Legs</p>
             <p class="mt-4" style="font-family: inherit">
@@ -227,12 +171,12 @@
               muscles can improve overall athletic performance and help prevent
               injuries.
             </p>
-            <form id="insert-row">
+            <form id="insert-row" method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
               <div class="row">
                 <div class="col">
                   <input
                     type="text"
-                    id="exercise"
+                    name="exercise"
                     class="form-control"
                     placeholder="Exercise"
                     required
@@ -241,7 +185,7 @@
                 <div class="col">
                   <input
                     type="text"
-                    id="sets"
+                    name="sets"
                     class="form-control"
                     placeholder="Sets & Reps"
                     required
@@ -251,16 +195,6 @@
                   <button type="submit" class="btn btn-outline-light w-100">
                     Add
                   </button>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col">
-                  <input
-                    type="text"
-                    class="form-control mt-3 mb-3"
-                    id="search"
-                    placeholder="Search for exercise"
-                  />
                 </div>
               </div>
             </form>
