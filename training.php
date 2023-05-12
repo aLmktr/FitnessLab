@@ -124,7 +124,7 @@
               "
               >Training Plans</a
             >
-            <a class="nav-link" href="health.html">Health</a>
+            <a class="nav-link" href="health.php">Health</a>
             <a class="nav-link" href="contact.html">Contact</a>
             <a class="nav-link" href="questionnaire.html">Questionnaire</a>
             <a class="nav-link" href="funpage.html">Game</a>
@@ -485,7 +485,7 @@
         <p>
           You don't know your calorie intake ?? don't worry - we've got you
           covered.
-          <a href="health.html" style="color: rgb(8, 18, 78)"
+          <a href="health.php" style="color: rgb(8, 18, 78)"
             >FitnessLab calorie calculator</a
           >
           allows you to easily calculate your daily calorie intake for free

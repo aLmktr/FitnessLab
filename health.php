@@ -65,7 +65,7 @@
             <a class="nav-link" href="training.php">Training Plans</a>
             <a
               class="nav-link"
-              href="health.html"
+              href="health.php"
               style="
                 border-radius: 25px;
                 border: rgba(255, 255, 255, 0.637);
