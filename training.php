@@ -114,7 +114,7 @@
             <a class="nav-link" href="index.html">Home</a>
             <a
               class="nav-link"
-              href="training.html"
+              href="training.php"
               style="
                 border-radius: 25px;
                 border: rgba(255, 255, 255, 0.637);
