@@ -1,14 +1,10 @@
 <?php 
+    // include connection   
+    include_once 'php/db_connection.php';
+
     // check if form submitted
     if($_SERVER["REQUEST_METHOD"] == "POST"){
         $calorie = $_POST["calorie"];
-
-        // connect to database
-        $server = "localhost"; $username = "root"; $password = ""; $dbname="fitnesslab";
-        $conn = mysqli_connect($server, $username, $password, $dbname);
-        if(!$conn){
-            die("Connection Faild!: ". mysqli_connect_error());
-        }     
 
         // query database
         $sql = "SELECT * FROM food WHERE calories < '$calorie'";
@@ -28,9 +24,6 @@
         } else {
             echo "<div class='alert alert-primary' role='alert'>0 Reslut found!</div>";
         }
-
-        //close connection 
-        mysqli_close($conn);
     }
     
     ?>
