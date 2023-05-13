@@ -547,6 +547,7 @@
           </p>
         </div>
       </div>
+      
       <div class="row mt-5" id="ExercisesDB">
         <p class="display-6">Search Exercises</p>
           <div class="col">
@@ -568,6 +569,7 @@
                         </div>
                     </div>
             </form>
+          
             <div class="row mt-4 mb-4">
               <p class="display-6">Add Exercise</p>
               <div class="col">
@@ -609,12 +611,28 @@
                  </form>
               </div>
             </div>
+
+            <div class="row mt-4 mb-4">
+                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
+                  <input type="hidden" value="remove" name="remove_exercise">
+                  <div class="row">
+                    <div class="col">
+                      <input type="text" name="name" class = "form-control" placeholder="Exercise name" >
+                    </div>
+                    <div class="col">
+                      <input type="submit" value="Remove" class="col-12 btn btn-outline-light">
+                    </div>
+                    <div class="col">
+                      <?php include 'php/training/delete_exercise.php' ?>
+                    </div>
+                </form>
+            </div>
+        </div>
+
            </div>
             <div class="col">
                  <?php include 'php/training/search_exercises.php'?>
             </div>
          </div>
-        </div>
-    </div>
   </body>
 </html>
