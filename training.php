@@ -16,11 +16,6 @@
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
-    <script
-      defer
-      src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"
-    ></script>
-    <script defer src="scripts/trainingTable.js"></script>
     <link rel="icon" href="src/fitnesslab-favicon-dark.png" />
     <link rel="stylesheet" href="styles/style.css" />
     <style>
@@ -577,12 +572,12 @@
                 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
                     <div class="row">
                       <div class="col">
-                      <input type="text" name="name" class = "form-control" placeholder="Exercise name">
+                      <input type="text" name="name" class = "form-control" placeholder="Exercise name" >
                       </div>
                     </div>
                     <div class="row mt-3">
                           <div class="col">
-                              <select name="category" class="form-select">
+                              <select name="category" class="form-select" >
                                 <option value="legs">Legs</option>
                                 <option value="chest">Chest</option>
                                 <option value="back">Back</option>
@@ -594,19 +589,19 @@
                     </div>
                     <div class="row mt-3">
                       <div class="col">
-                          <input type="text" name="sets" class = "form-control" placeholder="Sets">
+                          <input type="text" name="sets" class = "form-control" placeholder="Sets" >
                         </div>
                         <div class="col">
-                          <input type="text" name="reps" class = "form-control" placeholder="Reps">
+                          <input type="text" name="reps" class = "form-control" placeholder="Reps" >
                         </div>
                     </div>
                     <div class="row mt-3">
                       <div class="col">
-                          <input type="submit" value="Add" class="col-12 btn btn-outline-light">
+                          <input type="submit" value="Add" class="col-12 btn btn-outline-light" >
                         </div>
                     </div>
-                    <div class="row mt-3">
-                       <?php include 'php/insertExercise.php' ?>
+                    <div class="col">
+                      <?php include 'php/insertExercise.php' ?>
                     </div>
                  </form>
               </div>
