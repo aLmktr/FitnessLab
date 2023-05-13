@@ -1,5 +1,5 @@
 <?php 
-  
+      error_reporting(0);
        // class to maintain information about one row 
        class Exercise {
         private $exercise;
@@ -53,7 +53,7 @@
         echo "</table>";
       }
 
-      $display = displayExercises($legDayExercies);
+      displayExercises($legDayExercies);
 
 
 
@@ -70,8 +70,7 @@
         echo "<script>deleteTable();</script>";
 
         // display the exercises in a table
-        $display = displayExercises($legDayExercies);
-        echo $display;
+        displayExercises($legDayExercies);
       }
 
   ?>

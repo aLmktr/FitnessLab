@@ -552,38 +552,71 @@
         </div>
       </div>
       <div class="row mt-5" id="ExercisesDB">
-        <p class="display-6">Search for Exercise</p>
-        <div class="row mt-4">
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
+        <p class="display-6">Search Exercises</p>
           <div class="col">
-                <select name="category" class="form-select">
-                  <option value="legs">Legs</option>
-                  <option value="chest">Chest</option>
-                  <option value="back">Back</option>
-                  <option value="shoulders">Shoulders</option>
-                  <option value="triceps">Triceps</option>
-                  <option value="biceps">Biceps</option>
-                </select>
-          </div>
-          <div class="col">
-          <input type="submit" value="Search" class="btn btn-outline-light">
-          </div>
-       </form>
+          <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
+                    <div class="row">
+                        <div class="col">
+                              <select name="category" class="form-select">
+                                <option value="legs">Legs</option>
+                                <option value="chest">Chest</option>
+                                <option value="back">Back</option>
+                                <option value="shoulders">Shoulders</option>
+                                <option value="triceps">Triceps</option>
+                                <option value="biceps">Biceps</option>
+                              </select>
+                        </div>
+                        <div class="col">
+                        <input type="submit" value="Search" class="btn btn-outline-light">
+                        </div>
+                    </div>
+            </form>
+            <div class="row mt-4 mb-4">
+              <p class="display-6">Add Exercise</p>
+              <div class="col">
+                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
+                    <div class="row">
+                      <div class="col">
+                      <input type="text" name="name" class = "form-control" placeholder="Exercise name">
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+                          <div class="col">
+                              <select name="category" class="form-select">
+                                <option value="legs">Legs</option>
+                                <option value="chest">Chest</option>
+                                <option value="back">Back</option>
+                                <option value="shoulders">Shoulders</option>
+                                <option value="triceps">Triceps</option>
+                                <option value="biceps">Biceps</option>
+                              </select>
+                          </div>
+                    </div>
+                    <div class="row mt-3">
+                      <div class="col">
+                          <input type="text" name="sets" class = "form-control" placeholder="Sets">
+                        </div>
+                        <div class="col">
+                          <input type="text" name="reps" class = "form-control" placeholder="Reps">
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                      <div class="col">
+                          <input type="submit" value="Add" class="col-12 btn btn-outline-light">
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                       <?php include 'php/insertExercise.php' ?>
+                    </div>
+                 </form>
+              </div>
+            </div>
+           </div>
+            <div class="col">
+                 <?php include 'php/trainingData.php'?>
+            </div>
+         </div>
         </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <?php include 'php/trainingData.php'?>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--footer-->
-    <div class="footer nav-fixed-bottom">
-      <footer class="text-center text-light">
-        <!-- Copyright -->
-        <div class="text-center p-5">© 2023 Copyright: FitnessLab</div>
-      </footer>
     </div>
   </body>
 </html>

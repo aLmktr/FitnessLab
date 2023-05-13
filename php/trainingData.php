@@ -1,4 +1,5 @@
 <?php 
+error_reporting(0);
 // check if the form was submitted
 if($_SERVER['REQUEST_METHOD'] == "POST"){
     $category = $_POST['category'];
