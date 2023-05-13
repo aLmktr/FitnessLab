@@ -154,7 +154,7 @@
         <!--Legs-->
         <div class="row">
           <div class="col-md-6">
-            <?php include 'php/trainingTable.php'; ?>
+            <?php include 'php/training/leg_day_table.php'; ?>
           </div>
           <div class="col-md-6">
             <p class="h3">Day 1 / Legs</p>
@@ -166,7 +166,8 @@
               muscles can improve overall athletic performance and help prevent
               injuries.
             </p>
-            <form id="insert-row" method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+            <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+              <input type="hidden" value="legDay" name="leg_day_from">
               <div class="row">
                 <div class="col">
                   <input
@@ -549,8 +550,9 @@
       <div class="row mt-5" id="ExercisesDB">
         <p class="display-6">Search Exercises</p>
           <div class="col">
-          <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
-                    <div class="row">
+          <form name="search_exercises" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
+                    <input type="hidden" value="search" name="search_exercises">
+                      <div class="row">
                         <div class="col">
                               <select name="category" class="form-select">
                                 <option value="legs">Legs</option>
@@ -569,7 +571,8 @@
             <div class="row mt-4 mb-4">
               <p class="display-6">Add Exercise</p>
               <div class="col">
-                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
+                <form name="insert_exercises" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
+                    <input type="hidden" value="insert" name="insert_exercises">
                     <div class="row">
                       <div class="col">
                       <input type="text" name="name" class = "form-control" placeholder="Exercise name" >
@@ -601,14 +604,14 @@
                         </div>
                     </div>
                     <div class="col">
-                      <?php include 'php/insertExercise.php' ?>
+                     <?php include 'php/training/insert_exercise.php'?>
                     </div>
                  </form>
               </div>
             </div>
            </div>
             <div class="col">
-                 <?php include 'php/trainingData.php'?>
+                 <?php include 'php/training/search_exercises.php'?>
             </div>
          </div>
         </div>
