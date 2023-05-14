@@ -90,7 +90,7 @@
         <div class="col-lg-6 mx-auto text-center">
           <form
             action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>"
-            method="get"
+            method="POST"
             enctype="application/x-www-form-urlencoded"
           >
             <div class="form-outline mb-3">
@@ -131,12 +131,6 @@
         </div>
       </div>
     </div>
-    <!--footer-->
-    <div class="footer fixed-bottom">
-      <footer class="text-center text-light">
-        <!-- Copyright -->
-        <div class="text-center p-5">© 2023 Copyright: FitnessLab</div>
-      </footer>
     </div>
   </body>
 </html>
