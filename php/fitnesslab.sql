@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 11, 2023 at 06:58 PM
+-- Generation Time: May 14, 2023 at 01:03 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -20,6 +20,31 @@ SET time_zone = "+00:00";
 --
 -- Database: `fitnesslab`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `activity_levels`
+--
+
+CREATE TABLE `activity_levels` (
+  `id` int(11) NOT NULL,
+  `level` varchar(255) NOT NULL,
+  `description` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `activity_levels`
+--
+
+INSERT INTO `activity_levels` (`id`, `level`, `description`) VALUES
+(1, 'Sedentary', 'Little or no exercise with a desk job or mostly sitting throughout the day.'),
+(2, 'Lightly active', 'Light exercise or sports 1-3 days a week, or an active job (e.g. walking, housework, or manual labor).'),
+(3, 'Moderately active', 'Moderate exercise or sports 3-5 days a week (e.g. brisk walking, dancing, or gardening).'),
+(4, 'Very active', 'Hard exercise or sports 6-7 days a week (e.g. running, swimming, or weightlifting).'),
+(5, 'Super active', 'Hard daily exercise or sports and physical job or training twice a day.'),
+(6, 'Extremely active', 'Athlete with an extremely intense training routine or very physically demanding job.'),
+(7, 'Meticulously active', 'Athlete training for multiple hours every day, with a highly demanding physical job, or training for a specific event or competition.');
 
 -- --------------------------------------------------------
 
@@ -87,7 +112,8 @@ INSERT INTO `exercises` (`id`, `name`, `sets`, `reps`, `category`) VALUES
 (45, 'Cable flys', 3, 12, 'chest'),
 (46, 'Hammer curls (neutral grip)', 3, 12, 'biceps'),
 (47, 'Diamond pushups', 3, 12, 'triceps'),
-(48, 'Arnold press', 3, 10, 'shoulders');
+(48, 'Arnold press', 3, 10, 'shoulders'),
+(71, 'Push ups', 10, 4, 'chest');
 
 -- --------------------------------------------------------
 
@@ -156,34 +182,15 @@ INSERT INTO `food` (`id`, `name`, `calories`, `serving_size`) VALUES
 (47, 'Chicken Curry', 350, '1 cup'),
 (48, 'Vegetable Curry', 200, '1 cup');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `users`
---
-
-CREATE TABLE `users` (
-  `id` int(11) NOT NULL,
-  `name` varchar(20) NOT NULL,
-  `age` int(11) NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `join_date` timestamp NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `users`
---
-
-INSERT INTO `users` (`id`, `name`, `age`, `email`, `join_date`) VALUES
-(1, 'ronnie', 36, 'ronnie@squ.edu.om', '2023-05-11 14:42:24'),
-(2, 'Abdullah', 26, 'abdullah@email.com', '2023-05-11 14:42:24'),
-(3, 'Nasser', 18, 'nasser@email.com', '2023-05-11 14:42:24'),
-(4, 'fatma', 21, 'fatma@email.com', '2023-05-11 14:42:24'),
-(5, 'maryam', 27, 'maryam@email.com', '2023-05-11 14:42:24');
-
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `activity_levels`
+--
+ALTER TABLE `activity_levels`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `exercises`
@@ -198,32 +205,26 @@ ALTER TABLE `food`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`);
-
---
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `activity_levels`
+--
+ALTER TABLE `activity_levels`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `exercises`
 --
 ALTER TABLE `exercises`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
 
 --
 -- AUTO_INCREMENT for table `food`
 --
 ALTER TABLE `food`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
-
---
--- AUTO_INCREMENT for table `users`
---
-ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
