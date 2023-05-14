@@ -126,7 +126,7 @@
               <a class="nav-link" href="contact.php">Contact</a>
               <a
                 class="nav-link"
-                href="questionnaire.html"
+                href="questionnaire.php"
                 style="
                   border-radius: 25px;
                   border: rgba(255, 255, 255, 0.637);
@@ -140,16 +140,17 @@
           </div>
         </div>
       </nav>
+
       <h1>Customer Feedback Questionnaire</h1>
-      <form action="Questionnaire.php" method="POST">
+      <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required />
+        <input type="text" id="name" name="name" />
 
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required />
+        <input type="email" id="email" name="email" />
 
         <label for="rating">Overall satisfaction:</label>
-        <input type="radio" id="rating1" name="rating" value="1" required />
+        <input type="radio" id="rating1" name="rating" value="1" />
         <label for="rating1">1</label>
         <input type="radio" id="rating2" name="rating" value="2" />
         <label for="rating2">2</label>
@@ -161,7 +162,7 @@
         <label for="rating5">5</label>
 
         <label for="feedback">What did you like about our service?</label>
-        <textarea id="feedback" name="feedback" rows="5"></textarea>
+        <textarea id="feedback" name="feedback" rows="5" placeholder="Feedback"></textarea>
 
         <label for="improvements">How can we improve our service?</label>
         <input
@@ -190,76 +191,9 @@
         <input type="checkbox" id="newsletter" name="newsletter" value="yes" />
 
         <input type="submit" value="Submit" />
+        <?php include 'php/questionnaire/questionnaire_validation.php' ?>
       </form>
-      <script>
-        const form = document.querySelector("form");
-        const nameInput = document.getElementById("name");
-        const emailInput = document.getElementById("email");
-        const ratingInputs = document.querySelectorAll('input[name="rating"]');
-        const feedbackInput = document.getElementById("feedback");
-        const improvementsInputs = document.querySelectorAll(
-          'input[name="improvements"]'
-        );
-        const newsletterInput = document.getElementById("newsletter");
-
-        // Define validation patterns
-        const namePattern = /^[a-zA-Z\s]+$/;
-        const emailPattern = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
-
-        // Define custom validation messages
-        const nameError = "Please enter a valid name.";
-        const emailError = "Please enter a valid email address.";
-        const ratingError = "Please select an overall satisfaction rating.";
-        const improvementsError =
-          "Please select at least one improvement option.";
-
-        // Validate form on submit
-        form.addEventListener("submit", (event) => {
-          // Validate name
-          if (!nameInput.value.match(namePattern)) {
-            event.preventDefault(); // prevent form submission
-            nameInput.reportValidity(); // show default validation message
-            alert(nameError); // show custom validation message
-          }
-
-          // Validate email
-          if (!emailInput.value.match(emailPattern)) {
-            event.preventDefault(); // prevent form submission
-            emailInput.reportValidity(); // show default validation message
-            alert(emailError); // show custom validation message
-          }
-
-          // Validate rating
-          let ratingChecked = false;
-          ratingInputs.forEach((input) => {
-            if (input.checked) {
-              ratingChecked = true;
-            }
-          });
-          if (!ratingChecked) {
-            event.preventDefault(); // prevent form submission
-            alert(ratingError); // show custom validation message
-          }
-
-          // Validate improvements
-          let improvementsChecked = false;
-          improvementsInputs.forEach((input) => {
-            if (input.checked) {
-              improvementsChecked = true;
-            }
-          });
-          if (!improvementsChecked) {
-            event.preventDefault(); // prevent form submission
-            alert(improvementsError); // show custom validation message
-          }
-        });
-      </script>
-      <div class="footer nav-fixed-bottom">
-        <footer class="text-center text-light">
-          <!-- Copyright -->
-          <div class="text-center p-5">© 2023 Copyright: FitnessLab</div>
-        </footer>
-      </div>
+      
     </body>
   </html>
 </html>
