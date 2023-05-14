@@ -31,5 +31,4 @@ function questionnaire($data) {
 
     //close connection 
     mysqli_close($conn);
-}
 ?>
