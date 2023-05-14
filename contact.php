@@ -89,15 +89,15 @@
       <div class="row">
         <div class="col-lg-6 mx-auto text-center">
           <form
-            action="mailto:help@fitnesslab.com"
+            action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>"
             method="get"
             enctype="application/x-www-form-urlencoded"
           >
             <div class="form-outline mb-3">
-              <input class="form-control" type="text" placeholder="Name" />
+              <input class="form-control" type="text" placeholder="Name" name="name"/>
             </div>
             <div class="form-outline mb-3">
-              <input class="form-control" type="email" placeholder="Email" />
+              <input class="form-control" type="email" placeholder="Email" name="email"/>
             </div>
             <div class="from-outline mb3">
               <textarea
@@ -116,6 +116,7 @@
             />
             <button type="submit" class="btn btn-light w-100 mt-3">Send</button>
           </form>
+          <?php include 'php/contact/contact_from.php' ?>
         </div>
       </div>
       <div class="row mt-5">
