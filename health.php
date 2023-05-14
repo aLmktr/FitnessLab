@@ -23,8 +23,6 @@
     />
 
     <link rel="stylesheet" href="styles/style.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-    <script defer src="scripts/infoTable.js"></script>
     <script defer src="scripts/calorieCalculator.js"></script>
     <style>
       p.h3 {
@@ -32,7 +30,7 @@
         font-family: inherit;
         font-size: 1.8em;
         font-weight: lighter;
-      }
+      } 
     </style>
     <title>Health & nutrition</title>
   </head>
@@ -212,11 +210,6 @@
       </div>
       <!--Below Calculator-->
       <!--Q1-->
-      <div class="row my-5" ng-app="table-app">
-        <p class="h3 mb-4">What does activity level mean?</p>
-        <div class="col-md-6 col-lg-auto" id="activityTable"></div>
-      </div>
-      <!--Q2-->
       <div class="row">
         <div class="col-md-6 col-lg-auto">
           <p class="h3 mb-3">
@@ -252,6 +245,13 @@
               </div>
         </div>
       </div>
+      <!--Q2-->
+        <div class="row my-5">
+          <div class="col">
+              <p class="h3 mb-4">What does activity level mean?</p>
+              <?php include 'php/health/activity_table_data.php';?>
+          </div>
+        </div>
     </div>
   </body>
 </html>
