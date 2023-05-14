@@ -565,12 +565,33 @@
                               </select>
                         </div>
                         <div class="col">
-                        <input type="submit" value="Search" class="btn btn-outline-light">
+                        <input type="submit" value="Search" class="col-12 btn btn-outline-light">
                         </div>
                     </div>
             </form>
           
             <div class="row mt-4 mb-4">
+
+
+            <p class="display-6">Remove Exercise</p>
+                  <div class="row mt-4 mb-4">
+                      <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
+                        <input type="hidden" value="remove" name="remove_exercise">
+                        <div class="row">
+                          <div class="col">
+                            <input type="text" name="name" class = "form-control" placeholder="Exercise name" >
+                          </div>
+                          <div class="col">
+                            <input type="submit" value="Remove" class="col-12 btn btn-outline-light">
+                          </div>
+                          <div class="col">
+                            <?php include 'php/training/delete_exercise.php' ?>
+                          </div>
+                      </form>
+                  </div>
+              </div>
+
+
               <p class="display-6">Add Exercise</p>
               <div class="col">
                 <form name="insert_exercises" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
@@ -612,22 +633,6 @@
               </div>
             </div>
 
-            <div class="row mt-4 mb-4">
-                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
-                  <input type="hidden" value="remove" name="remove_exercise">
-                  <div class="row">
-                    <div class="col">
-                      <input type="text" name="name" class = "form-control" placeholder="Exercise name" >
-                    </div>
-                    <div class="col">
-                      <input type="submit" value="Remove" class="col-12 btn btn-outline-light">
-                    </div>
-                    <div class="col">
-                      <?php include 'php/training/delete_exercise.php' ?>
-                    </div>
-                </form>
-            </div>
-        </div>
 
            </div>
             <div class="col">
