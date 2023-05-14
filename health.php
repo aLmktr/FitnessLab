@@ -72,7 +72,7 @@
               "
               >Health</a
             >
-            <a class="nav-link" href="contact.html">Contact</a>
+            <a class="nav-link" href="contact.php">Contact</a>
             <a class="nav-link" href="questionnaire.html">Questionnaire</a>
             <a class="nav-link" href="funpage.html">Game</a>
           </div>

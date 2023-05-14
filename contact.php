@@ -67,7 +67,7 @@
             <a class="nav-link" href="health.php">Health</a>
             <a
               class="nav-link"
-              href="contact.html"
+              href="contact.php"
               style="
                 border-radius: 25px;
                 border: rgba(255, 255, 255, 0.637);
